@@ -56,9 +56,9 @@ body {
 .grid-item img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center;
   border-radius: 2em;
 }
 
@@ -96,7 +96,7 @@ body {
 
 .box-four {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, fit-content);
   grid-template-rows: max-content;
   grid-template-areas: 'box-four-left box-four-right';
   gap: 2em;
