@@ -33,7 +33,7 @@ body {
 .grid {
   display: grid;
   gap: 2em;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: repeat(5, auto);
   grid-template-areas: 
     'box-one'
@@ -41,16 +41,22 @@ body {
     'box-three'
     'box-four'
     'box-five';
+
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
 }
 
 .grid-item {
   border-radius: 2em;
+  width: 100%;
+  max-width: fit-content;
+
 }
 
 .grid-item img {
   display: block;
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center center;
   border-radius: 2em;
@@ -63,6 +69,7 @@ body {
   gap: 2em;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: max-content;
+  grid-auto-flow: dense;
 }
 
 .box-one {
@@ -79,6 +86,7 @@ body {
     'item-3 item-4 item-6'
     'item-3 item-5 item-6';
   grid-area: box-two;
+  grid-auto-flow: dense;
 }
 
 .box-three {
@@ -93,6 +101,7 @@ body {
   grid-template-areas: 'box-four-left box-four-right';
   gap: 2em;
   grid-area: box-four;
+  grid-auto-flow: dense;
 } 
 
 .box-four-left {
@@ -145,6 +154,7 @@ body {
 .box-five {
   grid-template-areas: 'item-15 item-16';
   grid-area: box-five;
+  grid-auto-flow: dense;
 }
 
 .item-1 {
@@ -287,7 +297,8 @@ body {
     gap: 1em;
 
   }
- 
+
+  
  
 
 }
