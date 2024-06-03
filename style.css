@@ -1,3 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "Plus Jakarta Sans";
+  font-size: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 90em;
+  margin: 0 auto;
+  padding: 7.5em 10em;
+}
+
+#product-gallery {
+  background-color: hsla(0, 0%, 96%, 1);
+}
+
 .grid {
   padding-top: 4em;
   display: grid;
